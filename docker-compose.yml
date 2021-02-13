@@ -20,12 +20,6 @@ services:
         - 'GF_SERVER_HTTP_PORT=80'
         - 'GF_SESSION_PROVIDER=memory'
         - 'GF_AUTH_ANONYMOUS_ENABLED=true'
-  sensor:
-    build: ./sensor
-    privileged: true
-    restart: always
-    volumes:
-      - 'sense-data:/data'
   telegraf:
     build: ./telegraf
     restart: always
