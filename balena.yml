@@ -14,7 +14,7 @@ data:
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_gpu_mem: 128
     - BALENA_HOST_CONFIG_hdmi_cvt: 1024 600 60 6 0 0 0
-    - BALENA_HOST_CONFIG_hdmi_force_hotplug: 0
+    - BALENA_HOST_CONFIG_hdmi_force_hotplug: 1
     - BALENA_HOST_CONFIG_hdmi_group: 2
     - BALENA_HOST_CONFIG_hdmi_mode: 87
   applicationEnvironmentVariables:
