@@ -1,0 +1,43 @@
+name: "balenaDash"
+description: "Raspberry Pi-powered digital signage or website viewer, remotely accessible from anywhere."
+type: "sw.application"
+assets:
+  repository:
+    type: "blob.asset"
+    data:
+      url: "https://github.com/martins1991/balena-sense"
+  logo:
+    type: "blob.asset"
+    data:
+      url: "https://raw.githubusercontent.com/martins1991/balena-sense/master/logo.png"
+data:
+  applicationConfigVariables:
+    - BALENA_HOST_CONFIG_gpu_mem: 128
+    - BALENA_HOST_CONFIG_hdmi_cvt: 1024 600 60 6 0 0 0
+    - BALENA_HOST_CONFIG_hdmi_force_hotplug: 0
+    - BALENA_HOST_CONFIG_hdmi_group: 2
+    - BALENA_HOST_CONFIG_hdmi_mode: 87
+  applicationEnvironmentVariables:
+    - SHOW_CURSOR: 1
+    - CONTROL_TV: 0    
+    - ENABLE_GPU: 1   
+    - KIOSK: 1
+    - PERSISTENT: 1
+    - PORTAL_SSID: balenaDash
+    - PORTAL_PASSPHRASE: balenaDash
+    - ACTIVITY_TIMEOUT: 600
+    - LAUNCH_URL: "http://grafana:80"
+    - ROTATE_DISPLAY: normal
+    - WINDOW_SIZE: ""
+    - WINDOW_POSITION: 0,0
+    - LOCAL_HTTP_DELAY: 0
+    - FBCP_DISPLAY: "adafruit-hx8357d-pitft"
+  defaultDeviceType: "raspberrypi4-64"
+  supportedDeviceTypes:
+    - "raspberrypi4-64"
+    - "fincm3"
+    - "raspberrypi3"
+    - "raspberrypi3-64"
+    - "intel-nuc"
+    - "genericx86-64-ext"
+    - "raspberrypi400-64"

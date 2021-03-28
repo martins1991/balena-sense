@@ -1,1 +1,2 @@
-type: balena
+type: generic
+publishMetadata: true
